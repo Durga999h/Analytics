@@ -30,7 +30,7 @@
   },
   "models": [
     {
-      "name": "google_analytics_360_v2",
+      "name": "google_analytics_360_v2_c1",
       "connection_constant": "CONNECTION_NAME"
     }
   ]

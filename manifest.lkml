@@ -5,8 +5,8 @@ project_name: "block-ga-360"
 
 # Used in google_analytics_block.model connection param
 constant: CONNECTION_NAME {
-  value: "looker-private-demo"
-  export: override_required
+  value: "analytics-poc-ai"
+  export: override_optional
 }
 
 # Used in ga_sessions.view sql_table_name
