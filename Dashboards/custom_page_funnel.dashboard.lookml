@@ -1,5 +1,5 @@
 - dashboard: custom_page_funnel
-  title: Custom Page Funnel
+  title: Custom Page Funnel Custom
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:

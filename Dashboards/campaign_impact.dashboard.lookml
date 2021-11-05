@@ -1,5 +1,5 @@
 - dashboard: campaign_impact
-  title: Campaign Impact
+  title: Campaign Impact Custom
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
@@ -305,7 +305,7 @@
   - name: Campaign Date
     title: Campaign Date
     type: field_filter
-    default_value: 7 day
+    default_value: 2017
     allow_multiple_values: true
     required: false
     ui_config:
@@ -329,7 +329,7 @@
   - name: User Return Date
     title: User Return Date
     type: field_filter
-    default_value: 7 day
+    default_value: 2017
     allow_multiple_values: true
     required: false
     ui_config:

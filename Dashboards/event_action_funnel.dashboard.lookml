@@ -1,5 +1,5 @@
 - dashboard: event_action_funnel
-  title: Event Action Funnel
+  title: Event Action Funnel Custom
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:

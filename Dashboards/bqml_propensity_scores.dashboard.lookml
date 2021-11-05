@@ -1,5 +1,5 @@
 - dashboard: bqml_propensity_scores
-  title: BQML Propensity Scores
+  title: BQML Propensity Scores Custom
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:

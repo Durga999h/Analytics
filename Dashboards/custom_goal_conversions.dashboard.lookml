@@ -1,5 +1,5 @@
 - dashboard: custom_goal_conversions
-  title: Custom Goal Conversions
+  title: Custom Goal Conversions Custom
   layout: newspaper
   preferred_viewer: dashboards-next
   load_configuration: wait
@@ -1056,7 +1056,7 @@
   - name: Date
     title: Date
     type: field_filter
-    default_value: 7 day
+    default_value: 2017
     allow_multiple_values: true
     required: false
     ui_config:

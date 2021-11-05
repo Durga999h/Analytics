@@ -238,7 +238,7 @@ explore: ga_sessions {
       measures: [bounce_rate, page_views_session, percent_new_sessions, timeonsite_average_per_session, visits_total]
       filters: [
         ga_sessions.audience_selector: "Channel",
-        ga_sessions.partition_date: "7 days"
+        ga_sessions.partition_date: "2017"
       ]
     }
 
