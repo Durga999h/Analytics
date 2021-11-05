@@ -1,5 +1,5 @@
 - dashboard: campaign_impact
-  title: Campaign Impact Custom
+  title: Campaign Impact Performance Custom
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
