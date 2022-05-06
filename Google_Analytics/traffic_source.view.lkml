@@ -97,6 +97,38 @@ view: traffic_source {
       value: "Landing"
     }
   }
+  parameter: Date_granularity{
+    type: unquoted
+    allowed_value: {
+      label: "Traffic by Year"
+      value: "year"
+    }
+    allowed_value: {
+      label: "Traffic by Month"
+      value: "month"
+    }
+    allowed_value: {
+      label: "Traffic by Quarter"
+      value: "quarter"
+    }
+    allowed_value: {
+      label: "Traffic by Week"
+      value: "week"
+    }
+  }
+
+   dimension: date_filter_1 {
+    sql:
+    {% if Date_granularity._parameter_value == 'year' %}
+    ${ga_sessions.partition_year}
+    {% elsif Date_granularity._parameter_value == 'month' %}
+     ${ga_sessions.partition_month_name}
+    {% elsif Date_granularity._parameter_value == 'quarter' %}
+     ${ga_sessions.partition_quarter_of_year}
+    {% else %}
+    ${ga_sessions.partition_week}
+    {% endif %};;
+   }
   dimension: source_top {
     sql:
     {% if Top_Referrers_Landing_Pages._parameter_value == 'Referrers' %}

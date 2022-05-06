@@ -323,7 +323,6 @@ view: ga_sessions {
     sql: TIMESTAMP_SECONDS(${TABLE}.visitStarttime);;
     convert_tz: no
   }
-
   ########## MEASURES ##############
 
   measure: first_time_sessions {
