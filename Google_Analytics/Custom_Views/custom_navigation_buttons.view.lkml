@@ -24,4 +24,27 @@ view: custom_navigation_buttons {
       </div>
     <div style="background-color: #F6F6F7; height:500px;width:100%"></div>;;
   }
+
+  measure: dash_nav1 {
+    view_label: "Session"
+    group_label: "Dashboard Navigation"
+    label: "Navigation Bar"
+    type: string
+    sql: "";;
+    html:
+    <div style="background-color: #F6F6F7; height:500px;width:100%"></div>
+      <div style="background-color: #F6F6F7; border: solid 1px #4285F4; border-radius: 5px; padding: 5px 10px; height: 60px; width:100%">
+        <nav style="font-size: 18px; color: #4285F4">
+
+          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #27a9e1;" href="#home">Overview</a>
+
+          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #27a9e1;" href="#home">Audience</a>
+
+          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #27a9e1;" href="#home">Acquisition</a>
+
+
+      </nav>
+      </div>
+      <div style="background-color: #F6F6F7; height:500px;width:100%"></div>;;
+  }
 }
