@@ -36,11 +36,12 @@ view: custom_navigation_buttons {
       <div style="background-color: #F6F6F7; border: solid 1px #4285F4; border-radius: 5px; padding: 5px 10px; height: 60px; width:100%">
         <nav style="font-size: 18px; color: #4285F4">
 
-          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #27a9e1;" href="#home">Overview</a>
+          <a  style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #25435A;" href="#home">Overview</a>
+          <a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: left; line-height: 1.1px; font-weight: bold;" href="#home"> </a>
+          <a  style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #25435A;" href="#home">Audience</a>
+          <a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: left; line-height: 1.6px; font-weight: bold;" href="#home"> </a>
 
-          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #27a9e1;" href="#home">Audience</a>
-
-          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #27a9e1;" href="#home">Acquisition</a>
+          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #25435A;" href="#home">Acquisition</a>
 
 
       </nav>
