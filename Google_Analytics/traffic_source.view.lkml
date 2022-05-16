@@ -86,7 +86,66 @@ view: traffic_source {
 
    drill_fields: [ad_content, campaign, keyword, source_medium]
   }
+  parameter: Top_Referrers_Landing_Pages{
+    type: unquoted
+    allowed_value: {
+      label: "Top Referrers"
+      value: "Referrers"
+    }
+    allowed_value: {
+      label: "Top Landing Pages"
+      value: "Landing"
+    }
+  }
+  parameter: Date_granularity{
+    type: unquoted
+    allowed_value: {
+      label: "Traffic by Year"
+      value: "year"
+    }
+    allowed_value: {
+      label: "Traffic by Month"
+      value: "month"
+    }
+    allowed_value: {
+      label: "Traffic by Quarter"
+      value: "quarter"
+    }
+    allowed_value: {
+      label: "Traffic by Week"
+      value: "week"
+    }
+  }
 
+   dimension: date_filter_1 {
+    sql:
+    {% if Date_granularity._parameter_value == 'year' %}
+    ${ga_sessions.partition_year}
+    {% elsif Date_granularity._parameter_value == 'month' %}
+     ${ga_sessions.partition_month_name}
+    {% elsif Date_granularity._parameter_value == 'quarter' %}
+     ${ga_sessions.partition_quarter_of_year}
+    {% else %}
+    ${ga_sessions.partition_week}
+    {% endif %};;
+   }
+  dimension: source_top {
+    sql:
+    {% if Top_Referrers_Landing_Pages._parameter_value == 'Referrers' %}
+      ${source}
+    {% else %}
+      ${ga_sessions.landing_page_formatted}
+    {% endif %};;
+  }
+  filter: medium_test {
+    type: string
+    suggest_explore: ga_sessions
+    suggest_dimension: medium
+  }
+  dimension: check {
+    type: yesno
+    sql: {% condition medium_test %} ${medium} {% endcondition %} ;;
+  }
   dimension: source_medium {
     view_label: "Acquisition"
     group_label: "Traffic Sources"
