@@ -212,7 +212,7 @@ view: totals {
     description: "Session-level rollup of Sessions."
     type: sum
     sql: ${TABLE}.totals.visits;;
-
+   ## html:  <a href= "https://mediaagility.looker.com/explore/google_analytics_360_v2_c1/ga_sessions?qid=8IIKCFJKwKkN5gQEzNSzr1&toggle=vis">{{rendered_value}}</a>;;
     value_format_name: formatted_number
     drill_fields: [source_medium, visits_total, new_visits_total, hits.page_count, bounces_rate, timeonsite_average_per_session]
   }

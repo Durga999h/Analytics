@@ -452,4 +452,13 @@ view: ga_sessions {
     value_format_name: formatted_number
     drill_fields: [client_id, account.id, visit_number, hits_total, page_views_total, time_on_site_total]
   }
+######Creating a parameter for Selecting between CG and HCP#####
+  parameter: Website  {
+    type: unquoted
+    default_value: "CG"
+    allowed_value: {
+      label: "Filter by HCP"
+      value: "HCP"
+    }
+  }
 }
