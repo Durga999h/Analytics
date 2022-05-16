@@ -58,7 +58,9 @@ view: ga_sessions {
     label: "User ID"
     sql: ${TABLE}.userid ;;
   }
-
+  dimension: logo {
+    html: <img src=”https://www.google.com/imgres?imgurl=https%3A%2F%2Fmms.businesswire.com%2Fmedia%2F20210916005288%2Fen%2F906884%2F5%2FEndeavorRx_logo.jpg&imgrefurl=https%3A%2F%2Fwww.businesswire.com%2Fnews%2Fhome%2F20210916005288%2Fen%2FAkili-Announces-EndeavorRx%25C2%25AE-Is-Now-Available-on-Android%25E2%2584%25A2-Devices-Expanding-Access-for-Children-with-ADHD&tbnid=PWwRkiitfzR6ZM&vet=12ahUKEwji5uPurOP3AhVKmdgFHbu1C4kQMygBegUIARCWAQ..i&docid=X7Z5N5aUD8m-3M&w=644&h=102&itg=1&q=endeavour%20rx%20logo&hl=en&ved=2ahUKEwji5uPurOP3AhVKmdgFHbu1C4kQMygBegUIARCWAQ” /> ;;
+  }
   dimension: visit_id {
     label: "Session ID"
     group_label: "ID"
@@ -323,7 +325,6 @@ view: ga_sessions {
     sql: TIMESTAMP_SECONDS(${TABLE}.visitStarttime);;
     convert_tz: no
   }
-
   ########## MEASURES ##############
 
   measure: first_time_sessions {
@@ -438,6 +439,17 @@ view: ga_sessions {
     value_format_name: formatted_number
     drill_fields: [client_id, account.id, visit_number, hits_total, page_views_total, time_on_site_total]
   }
-
-
+  ######Adding a measure for Akili Demo#######
+  measure: unique_visitors_last_60_months {
+    view_label: "Audience"
+    group_label: "User"
+    label: "Users_last_60_months"
+    description: "The total number of users for the requested time period."
+    type: count_distinct
+    allow_approximate_optimization: yes
+    sql: ${full_visitor_id} ;;
+    filters: [visit_start_date: "60 months"]
+    value_format_name: formatted_number
+    drill_fields: [client_id, account.id, visit_number, hits_total, page_views_total, time_on_site_total]
+  }
 }

@@ -20,6 +20,7 @@ view: totals {
     sql: ${TABLE}.totals.timeonsite ;;
   }
 
+
   dimension: time_on_site_tier {
     label: "Session Duration Tiers"
     description: "The length (returned as a string) of a session measured in seconds and reported in second increments."
@@ -55,7 +56,17 @@ view: totals {
 
     value_format_name: formatted_number
   }
+  ######Added new measure for Akili Demo######
+  measure: bounces_total_last_60_months {
+    group_label: "Session"
+    label: "Bounces last 60 months"
+    type: sum
+    sql: ${TABLE}.totals.bounces ;;
 
+    value_format_name: formatted_number
+    filters: [ga_sessions.visit_start_date : "60 months"]
+
+  }
   measure: hits_per_session {
     group_label: "Session"
     label: "Hits / Session"
@@ -202,6 +213,17 @@ view: totals {
     type: sum
     sql: ${TABLE}.totals.visits;;
 
+    value_format_name: formatted_number
+    drill_fields: [source_medium, visits_total, new_visits_total, hits.page_count, bounces_rate, timeonsite_average_per_session]
+  }
+  #####Adding a measure for Akili Demo#######
+  measure: visits_total_last12months {
+    group_label: "Sessions"
+    label: "Sessions_last 60 months"
+    description: "Session-level rollup of last 12 months Sessions."
+    type: sum
+    sql: ${TABLE}.totals.visits;;
+    filters: [ga_sessions.visit_start_date : "60 months"]
     value_format_name: formatted_number
     drill_fields: [source_medium, visits_total, new_visits_total, hits.page_count, bounces_rate, timeonsite_average_per_session]
   }

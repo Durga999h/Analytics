@@ -5,7 +5,7 @@
 
 
 view: device {
-  
+
 
   ########## DIMENSIONS ############
   dimension: browser {
@@ -128,7 +128,22 @@ view: device {
 
     drill_fields: [operating_system_version]
   }
-
+  ########Adding a new dimension for Akili Demo######
+  dimension: operating_system_ios_android  {
+    view_label: "Audience"
+    group_label: "Technology"
+    description: "Users' operating system iOS,Android"
+    type: string
+    sql: ${operating_system} ;;
+    suggestions: ["Android","iOS"]
+    drill_fields: [operating_system_version]
+  }
+  #######Creating a Filter########
+  filter: Device {
+    type: string
+    suggest_explore: ga_sessions
+    suggest_dimension: operating_system_ios_android
+  }
   dimension: operating_system_version {
     view_label: "Audience"
     group_label: "Technology"
