@@ -28,6 +28,15 @@ view: traffic_source {
     drill_fields: [ad_content, keyword, source, source_medium]
   }
 
+  dimension: Website_Category {
+    view_label: "Acquisition"
+    group_label: "Traffic Sources"
+    type: string
+    sql: "CG","HCP" ;;
+
+
+  }
+
   dimension: campaigncode {
     hidden: yes
     view_label: "Acquisition"
