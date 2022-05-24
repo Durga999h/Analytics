@@ -182,6 +182,7 @@ view: totals {
     sql: (${TABLE}.totals.totalTransactionRevenue/1000000) ;;
 
     value_format_name: usd_0
+    value_format: "0.00,\" K\""
     drill_fields: [transactions_count, transaction_revenue_total]
   }
 
