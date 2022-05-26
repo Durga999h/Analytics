@@ -359,6 +359,7 @@ view: ga_sessions {
     }
 
     value_format_name: formatted_number
+    value_format: "0.000,\" K\""
     drill_fields: [source_medium, first_time_visitors]
   }
 
