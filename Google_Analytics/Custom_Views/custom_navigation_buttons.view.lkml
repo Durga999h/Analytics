@@ -25,7 +25,7 @@ view: custom_navigation_buttons {
     <div style="background-color: #F6F6F7; height:500px;width:100%"></div>;;
   }
 
-  measure: dash_nav1 {
+  measure:dash_nav1 {
     view_label: "Session"
     group_label: "Dashboard Navigation"
     label: "Navigation Bar"
