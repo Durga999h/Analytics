@@ -32,7 +32,14 @@ view: traffic_source {
     view_label: "Acquisition"
     group_label: "Traffic Sources"
     type: string
-    sql: "CG","HCP" ;;
+    sql: (SELECT
+   DISTINCT "CG" AS ga_sessions_website_category_2
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`  AS ga_sessions
+UNION ALL
+SELECT "HCP"  AS ga_sessions_website_category_1
+FROM `bigquery-public-data.google_analytics_sample.ga_sessions_*`  AS ga_sessions
+
+group by 1) ;;
 
 
   }

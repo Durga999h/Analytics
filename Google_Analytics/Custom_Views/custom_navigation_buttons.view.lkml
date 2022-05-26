@@ -25,27 +25,35 @@ view: custom_navigation_buttons {
     <div style="background-color: #F6F6F7; height:500px;width:100%"></div>;;
   }
 
-  measure: dash_nav1 {
+  measure:dash_nav1 {
     view_label: "Session"
     group_label: "Dashboard Navigation"
     label: "Navigation Bar"
     type: string
     sql: "";;
     html:
-    <div style="background-color: #F6F6F7; height:500px;width:100%"></div>
-      <div style="background-color: #F6F6F7; border: solid 1px #4285F4; border-radius: 5px; padding: 5px 10px; height: 60px; width:100%">
-        <nav style="font-size: 18px; color: #4285F4">
+    <nav style="font-size: 18px; color: #4285F4">
+<div style>
+    <a style="padding: 5px 15px; border-top: solid 1px #AEC8C1; border-left: solid 1px #AEC8C1; border-right: solid 1px #AEC8C1; border-bottom: solid 1px #AEC8C1; border-radius: 5px 5px 5px 5px;  float: center; line-height: 40px; font-weight: bold; background-color: #2AAA8A;color: white"  href="https://mediaagility.looker.com/dashboards/341">Overview</a>
 
-          <a  style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #25435A;" href="#home">Overview</a>
-          <a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: left; line-height: 1.1px; font-weight: bold;" href="#home"> </a>
-          <a  style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #25435A;" href="#home">Audience</a>
-          <a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: left; line-height: 1.6px; font-weight: bold;" href="#home"> </a>
+<a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: center; line-height: 1.1px; font-weight: bold;" href="#home"> </a>
 
-          <a style="color: #ffffff; padding: 5px 15px; border-top: solid 1px #27a9e1 border-left: solid 1px #27a9e1; border-right: solid 1px #27a9e1; border-radius: 5px 5px 0 0; float: left; line-height: 40px; font-weight: bold; background-color: #25435A;" href="#home">Acquisition</a>
+    <a style="padding: 5px 15px; border-top: solid 1px #AEC8C1; border-left: solid 1px #AEC8C1; border-right: solid 1px #AEC8C1; border-bottom: solid 1px #AEC8C1; border-radius: 5px 5px 5px 5px;  float: center; line-height: 40px; font-weight: bold; background-color: #ffffff;color: #2AAA8A"  href="https://mediaagility.looker.com/dashboards/343?Device={{ _filters['operating_system_ios_android'] | url_encode }}">Website Performance</a>
+<a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: center; line-height: 1.1px; font-weight: bold;" href="#home"> </a>
+
+<a style="padding: 5px 15px; border-top: solid 1px #AEC8C1; border-left: solid 1px #AEC8C1; border-right: solid 1px #AEC8C1; border-bottom: solid 1px #AEC8C1; border-radius: 5px 5px 5px 5px; float: center; line-height: 40px; font-weight: bold; background-color: #ffffff;color: #2AAA8A" href="https://mediaagility.looker.com/dashboards/342" >Audience</a>
+          <a  style="color: #ffffff; padding: 1px 2px; border-top: solid 1px #ffffff border-left: solid 1px #ffffff; border-right: solid 1px #ffffff; border-radius: 5px 5px 0 0; float: left; line-height: 1.1px; font-weight: bold;" href="#home">  </a>
 
 
-      </nav>
-      </div>
-      <div style="background-color: #F6F6F7; height:500px;width:100%"></div>;;
+
+<a style="padding: 5px 15px; border-top: solid 1px #AEC8C1; border-left: solid 1px #AEC8C1; border-right: solid 1px #AEC8C1; border-bottom: solid 1px #AEC8C1; border-radius: 5px 5px 5px 5px; float: center; line-height: 40px; font-weight: bold; background-color: #ffffff;color: #2AAA8A" href="https://mediaagility.looker.com/dashboards/319" >Campaign</a>
+
+
+
+
+
+
+
+    </div>;;
   }
 }

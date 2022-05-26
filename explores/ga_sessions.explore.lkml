@@ -2,6 +2,8 @@ include: "/*/*.view.lkml"
 include: "/Google_Analytics/*.view.lkml"
 include: "/Google_Analytics/Sessions/*.view.lkml"
 include: "/Google_Analytics/Custom_Views/*.view.lkml"
+include: "/sql_runner_query.view.lkml"
+
 
 explore: ga_sessions {
   label: "Google Analytics Sessions"
@@ -87,6 +89,10 @@ explore: ga_sessions {
     type: left_outer
     relationship: one_to_one
     sql: LEFT JOIN UNNEST(${ga_sessions.custom_variables}) AS custom_variables ;;
+  }
+  join: sql_runner_query {
+    type: cross
+    relationship: many_to_one
   }
 
   ## Aggregate Tables for LookML Dashboards
