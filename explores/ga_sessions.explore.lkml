@@ -19,6 +19,7 @@ explore: ga_sessions {
     }
   }
 
+
   sql_always_where: ${partition_date} > '2017-01-01' ;;
 
   join: audience_cohorts {
